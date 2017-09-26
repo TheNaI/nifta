@@ -31,3 +31,40 @@ Template: dt-the7
     width: auto;
     height: auto;
 }
+#custom-comtact-form{
+    /*color : #727272;*/
+}
+
+#custom-comtact-form .assistive-text{
+    position: relative !important;
+    display: inline-block;
+}
+
+#custom-comtact-form  [type="text"]{
+    background-color: rgb(229, 229, 229);
+}
+#custom-comtact-form  textarea{
+    background-color: rgb(229, 229, 229);
+    resize: none;
+}
+#custom-comtact-form  .contact-form .dt-btn-submit,#custom-comtact-form  .contact-form [type="submit"]{
+    border: #737980 solid 1px;
+    color: #737980;
+    background-color: rgb(229, 229, 229);
+}
+#custom-comtact-form  .contact-form .dt-btn-submit:hover,#custom-comtact-form  .contact-form input[type="submit"]:not([name="update_cart"]):hover{
+    border: #737980 solid 1px;
+    color: rgb(229, 229, 229);
+    background-color: #737980;
+}
+#custom-comtact-form{
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+#custom-comtact-form > .vc_col-sm-6{
+    padding: 30px 50px;
+
+}
+#custom-comtact-form > .vc_col-sm-6:last-child{
+    border-left: 1px solid #777;
+}
