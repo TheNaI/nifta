@@ -8,63 +8,156 @@ License: This WordPress theme is comprised of two parts: (1) The PHP code and in
 Template: dt-the7
 */
 
-#product-797 .woocommerce-product-gallery--without-images{
+#footer.footer-outline-decoration {
+    border-top: 1px solid #E2E2E2;
+}
+
+#page input[type="text"], #page input[type="search"], #page input[type="tel"], #page input[type="url"], #page input[type="email"], #page input[type="number"], #page input[type="date"], #page input[type="range"], #page input[type="password"], #page select, #page textarea, #page .wpcf7-number {
+    font-family: "Source Sans Pro", Helvetica, Arial, Verdana, sans-serif;
+}
+
+#product-797 .woocommerce-product-gallery--without-images {
     display: none;
 }
-#product-797 .summary.entry-summary{
+
+#product-797 .summary.entry-summary {
     width: 100%;
 }
-#product-797 [data-type="image_select"].select-color ul.uni-cpo-image-select-list li a{
+
+#product-797 [data-type="image_select"].select-color ul.uni-cpo-image-select-list li a {
     border-radius: 100%;
 }
-#product-797 [data-type="image_select"].select-image ul.uni-cpo-image-select-list li{
+
+#product-797 [data-type="image_select"].select-image ul.uni-cpo-image-select-list li {
     width: auto;
     max-height: 200px;
     height: auto;
-}
-#product-797 [data-type="image_select"].select-image ul.uni-cpo-image-select-list li a{
-    width: auto;
-    height: auto;
-}
-#product-797 [data-type="image_select"].select-image ul.uni-cpo-image-select-list li a img{
-    max-height: 200px;
-    width: auto;
-    height: auto;
-}
-#custom-comtact-form{
-    /*color : #727272;*/
 }
 
-#custom-comtact-form .assistive-text{
+#product-797 [data-type="image_select"].select-image ul.uni-cpo-image-select-list li a {
+    width: auto;
+    height: auto;
+}
+
+#product-797 [data-type="image_select"].select-image ul.uni-cpo-image-select-list li a img {
+    max-height: 200px;
+    width: auto;
+    height: auto;
+}
+
+#custom-comtact-form {
+    font-family: "Source Sans Pro", Helvetica, Arial, Verdana, sans-serif;
+
+}
+
+#custom-comtact-form label.assistive-text {
     position: relative !important;
     display: inline-block;
+    padding: 5px 0;
+    font-weight: 600;
 }
 
-#custom-comtact-form  [type="text"]{
+#custom-comtact-form [type="text"] {
     background-color: rgb(229, 229, 229);
 }
-#custom-comtact-form  textarea{
+
+#custom-comtact-form textarea {
     background-color: rgb(229, 229, 229);
     resize: none;
 }
-#custom-comtact-form  .contact-form .dt-btn-submit,#custom-comtact-form  .contact-form [type="submit"]{
+
+#custom-comtact-form .contact-form .dt-btn-submit, #custom-comtact-form .contact-form [type="submit"] {
     border: #737980 solid 1px;
     color: #737980;
     background-color: rgb(229, 229, 229);
 }
-#custom-comtact-form  .contact-form .dt-btn-submit:hover,#custom-comtact-form  .contact-form input[type="submit"]:not([name="update_cart"]):hover{
+
+#custom-comtact-form .contact-form .dt-btn-submit:hover, #custom-comtact-form .contact-form input[type="submit"]:not([name="update_cart"]):hover {
     border: #737980 solid 1px;
     color: rgb(229, 229, 229);
     background-color: #737980;
 }
-#custom-comtact-form{
+
+#custom-comtact-form {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
-#custom-comtact-form > .vc_col-sm-6{
-    padding: 30px 50px;
+
+#custom-comtact-form > .vc_col-sm-6 {
+    padding: 30px 100px;
+}
+
+#custom-comtact-form > .vc_col-sm-6:last-child {
+    border-left: 1px solid #E2E2E2;
+}
+
+#custom-comtact-form > #custom-contact-info {
+    padding: 0;
+}
+
+#custom-comtact-form > #custom-contact-info .vc_column-inner {
+    padding: 0 15px;
+}
+
+#custom-comtact-form > #custom-contact-info .wpb_wrapper > .vc_row {
+    border-bottom: 1px solid #e2e2e2;
+    padding: 70px;
+    max-height: 200px;
+}
+
+#custom-comtact-form > #custom-contact-info > .wpb_wrapper > .vc_row > .vc_col-sm-3 {
+    border-bottom: 1px solid #e2e2e2;
+}
+
+#custom-comtact-form > #custom-contact-info .wpb_wrapper > .vc_row:last-child {
+    border-bottom: 0;
+}
+
+.custom-social-contact {
+    display: inline-block;
+}
+
+.custom-social-contact .aio-tooltip {
+    border: 1px solid #e2e2e2;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+.custom-social-contact .aio-tooltip:hover {
+    border: 1px solid #e2e2e2;
+    background-color: #e2e2e2;
+}
+.custom-social-contact .aio-tooltip:hover>.aio-icon.circle{
+    color: #f5f5f5!important;
 
 }
-#custom-comtact-form > .vc_col-sm-6:last-child{
-    border-left: 1px solid #777;
+
+@media  (max-width: 1300px) {
+    #custom-comtact-form > .vc_col-sm-6 {
+        padding: 30px 70px;
+    }
+}
+
+@media  (max-width: 1024px) {
+    #custom-comtact-form > .vc_col-sm-6 {
+        padding: 30px 20px;
+    }
+}
+
+@media  (max-width: 970px) {
+    #custom-comtact-form > #custom-contact-info .wpb_wrapper > .vc_row {
+        padding: 70px 30px;
+    }
+}
+
+@media  (max-width: 767px) {
+    #custom-comtact-form > #custom-contact-info .wpb_wrapper > .vc_row:first-child {
+        border-top: 1px solid #e2e2e2;
+    }
+    #custom-comtact-form > #custom-contact-info .wpb_wrapper > .vc_row {
+        max-height: inherit;
+        padding: 0 20px;
+        padding-top: 20px;
+    }
 }
