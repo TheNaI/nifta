@@ -149,6 +149,22 @@ Template: dt-the7
     padding: 12px 0;
     font-size: 12px;
 }
+.main-nav > li > a {
+    margin: 0;
+    padding: 17px;
+}
+.top-header .active-bg-decoration > li.act{
+    background-color: #FFF;
+}
+
+.top-header .outside-item-remove-margin.main-nav > li:last-child > a {
+    margin: 0;
+    padding: 0 10px;
+}
+.top-header .outside-item-remove-margin.main-nav > li:first-child > a {
+    margin: 0;
+    padding: 0 10px;
+}
 
 @media  (max-width: 1300px) {
     #custom-comtact-form > .vc_col-sm-6 {
