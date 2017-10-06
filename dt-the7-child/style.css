@@ -8,8 +8,14 @@ License: This WordPress theme is comprised of two parts: (1) The PHP code and in
 Template: dt-the7
 */
 
+#page.boxed{
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+
 #footer.footer-outline-decoration {
-    border-top: 1px solid #E2E2E2;
+    border-top: 2px solid #E2E2E2;
 }
 
 #page input[type="text"], #page input[type="search"], #page input[type="tel"], #page input[type="url"], #page input[type="email"], #page input[type="number"], #page input[type="date"], #page input[type="range"], #page input[type="password"], #page select, #page textarea, #page .wpcf7-number {
@@ -55,27 +61,64 @@ Template: dt-the7
     display: inline-block;
     padding: 5px 0;
     font-weight: 600;
+    text-transform: uppercase;
 }
 
 #custom-comtact-form [type="text"] {
-    background-color: rgb(229, 229, 229);
+    background-color: #F5F5F5;
+    border: #E2E2E2 2px solid;
 }
+#custom-comtact-form [type="text"]::-webkit-input-placeholder {
+    color:transparent;
+}
+
+#custom-comtact-form [type="text"]:-moz-placeholder { /* Firefox 18- */
+    color:transparent;
+}
+
+#custom-comtact-form [type="text"]::-moz-placeholder {  /* Firefox 19+ */
+    color:transparent;
+}
+
+#custom-comtact-form [type="text"]:-ms-input-placeholder {
+    color:transparent;
+}
+
 
 #custom-comtact-form textarea {
-    background-color: rgb(229, 229, 229);
+    background-color: #F5F5F5;
+    border: #E2E2E2 2px solid;
     resize: none;
+
 }
 
+#custom-comtact-form textarea::-webkit-input-placeholder {
+    color:transparent;
+}
+
+#custom-comtact-form textarea:-moz-placeholder { /* Firefox 18- */
+    color:transparent;
+}
+
+#custom-comtact-form textarea::-moz-placeholder {  /* Firefox 19+ */
+    color:transparent;
+}
+
+#custom-comtact-form textarea:-ms-input-placeholder {
+    color:transparent;
+}
+
+
 #custom-comtact-form .contact-form .dt-btn-submit, #custom-comtact-form .contact-form [type="submit"] {
-    border: #737980 solid 1px;
-    color: #737980;
-    background-color: rgb(229, 229, 229);
+    border: #737B8A solid 2px;
+    color: #737B8A;
+    background-color: #F5F5F5;
 }
 
 #custom-comtact-form .contact-form .dt-btn-submit:hover, #custom-comtact-form .contact-form input[type="submit"]:not([name="update_cart"]):hover {
-    border: #737980 solid 1px;
+    border: #737B8A solid 2px;
     color: rgb(229, 229, 229);
-    background-color: #737980;
+    background-color: #737B8A;
 }
 
 #custom-comtact-form {
@@ -90,7 +133,7 @@ Template: dt-the7
 }
 
 #custom-comtact-form > .vc_col-sm-6:last-child {
-    border-left: 1px solid #E2E2E2;
+    border-left: 2px solid #E2E2E2;
 }
 
 #custom-comtact-form > #custom-contact-info {
@@ -102,13 +145,13 @@ Template: dt-the7
 }
 
 #custom-comtact-form > #custom-contact-info .wpb_wrapper > .vc_row {
-    border-bottom: 1px solid #e2e2e2;
+    border-bottom: 2px solid #e2e2e2;
     padding: 70px;
     max-height: 200px;
 }
 
 #custom-comtact-form > #custom-contact-info > .wpb_wrapper > .vc_row > .vc_col-sm-3 {
-    border-bottom: 1px solid #e2e2e2;
+    border-bottom: 2px solid #e2e2e2;
 }
 
 #custom-comtact-form > #custom-contact-info .wpb_wrapper > .vc_row:last-child {
@@ -120,12 +163,12 @@ Template: dt-the7
 }
 
 .custom-social-contact .aio-tooltip {
-    border: 1px solid #e2e2e2;
+    border: 2px solid #e2e2e2;
     border-radius: 100%;
     margin-right: 10px;
 }
 .custom-social-contact .aio-tooltip:hover {
-    border: 1px solid #e2e2e2;
+    border: 2px solid #e2e2e2;
     background-color: #e2e2e2;
 }
 .custom-social-contact .aio-tooltip:hover>.aio-icon.circle{
@@ -186,7 +229,7 @@ Template: dt-the7
 
 @media  (max-width: 767px) {
     #custom-comtact-form > #custom-contact-info .wpb_wrapper > .vc_row:first-child {
-        border-top: 1px solid #e2e2e2;
+        border-top: 2px solid #e2e2e2;
     }
     #custom-comtact-form > #custom-contact-info .wpb_wrapper > .vc_row {
         max-height: inherit;
