@@ -237,3 +237,62 @@ Template: dt-the7
         padding-top: 20px;
     }
 }
+
+
+/* Custom popup select */
+.select-old{
+    opacity: 0;
+    position: fixed;
+    transition: 1s;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+.select-old > .uni-cpo-image-select-list{
+    width: 80%;
+    height: 80%;
+    background: #FFF;
+    left: 0;
+    right: 0;
+    top: 10%;
+    margin: auto;
+    position: absolute;
+}
+.select-old.hidden{
+    display: none !important;
+}
+.select-old.show{
+    opacity: 1;
+}
+.select-new{
+    text-align: center;
+    padding-top: 70px;
+    position: relative;
+}
+.select-title{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+.select-image-select{
+    max-width: 200px;
+}
+.select-item-name{
+    position: absolute;
+    left: 20px;
+    top: 45%;
+}
+.select-modal{
+    position: absolute;
+    right: 20px;
+    top: 45%;
+    text-decoration: none;
+    padding: 10px;
+    color: #000;
+    border: 2px solid #000;
+}
