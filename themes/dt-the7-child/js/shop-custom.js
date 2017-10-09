@@ -2,7 +2,7 @@ jQuery(document).ready(function($){
 	genSelect('#uni_cpo_option_charm_gold');
 	$('#uni_cpo_option_charm_gold-field').on('change', function(e){
 		console.log($(this).val());
-		$('#uni_cpo_option_charm_gold').addClass('hidden').delay(500).queue(function(next){
+		$('#uni_cpo_option_charm_gold').addClass('hidden').delay(0).queue(function(next){
 			$(this).removeClass('show');
 			next();
 		});
@@ -38,7 +38,7 @@ jQuery(document).ready(function($){
 }).delegate('.select-modal','click',function(e){
 	e.preventDefault();
 	$ = jQuery;
-	$($(this).data('target')).removeClass('hidden').delay(500).queue(function(next){
+	$($(this).data('target')).removeClass('hidden').delay(0).queue(function(next){
 		$(this).addClass('show');
 		next();
 	});
