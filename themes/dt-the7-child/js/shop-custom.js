@@ -1,20 +1,48 @@
 jQuery(document).ready(function($){
-	genSelect('#uni_cpo_option_charm_gold');
-	$('#uni_cpo_option_charm_gold-field').on('change', function(e){
-		console.log($(this).val());
-		$('#uni_cpo_option_charm_gold').addClass('hidden').delay(0).queue(function(next){
-			$(this).removeClass('show');
-			next();
-		});
-		$('.select-image-select').attr('src',$('#uni_cpo_option_charm_gold-field option:selected').attr('data-thumbimageuri'))
-		$('.select-title-name').text($('#uni_cpo_option_charm_gold-field option:selected').attr('data-imagetitle'))
+
+	var fieldGold = ['#uni_cpo_option_charm_gold'];
+	var fieldSilver = ['#uni_cpo_option_charm_silver'];
+	genData();
+
+	$('#uni_cpo_option_color-field').on('change', function(e){
+		if($(this).val() == 'gold'){
+			fieldGold.forEach(function(arr){
+				var idName = (arr[0] == '#') ? arr.split('#')[1] : arr;
+				$('.select-new[data-select-id="'+idName+'"]').show();
+			});
+			fieldSilver.forEach(function(arr){
+				var idName = (arr[0] == '#') ? arr.split('#')[1] : arr;
+				$('.select-new[data-select-id="'+idName+'"]').hide();
+			});
+		}
+		else if($(this).val() == 'silver'){
+			fieldGold.forEach(function(arr){
+				var idName = (arr[0] == '#') ? arr.split('#')[1] : arr;
+				$('.select-new[data-select-id="'+idName+'"]').hide();
+			});
+			fieldSilver.forEach(function(arr){
+				var idName = (arr[0] == '#') ? arr.split('#')[1] : arr;
+				$('.select-new[data-select-id="'+idName+'"]').show();
+			});
+		}
 	});
 
 	function genData(){
+		genSelect('#uni_cpo_option_charm_gold');
+		genSelect('#uni_cpo_option_charm_silver');
+		fieldGold.forEach(function(arr){
+			var idName = (arr[0] == '#') ? arr.split('#')[1] : arr;
+			$('.select-new[data-select-id="'+idName+'"]').show();
+		});
+		fieldSilver.forEach(function(arr){
+			var idName = (arr[0] == '#') ? arr.split('#')[1] : arr;
+			$('.select-new[data-select-id="'+idName+'"]').hide();
+		});
 	}
 
 	function genSelect(id){
-		var divSelect = $('<div>', {class : 'select-new'});
+		var idName = (id[0] == '#') ? id.split('#')[1] : id;
+		var divSelect = $('<div>', {class : 'select-new', 'data-select-id' :  idName});
 		$(id).addClass('select-old hidden');
 		var selectField = id+'-field';
 		$(selectField + ' option:selected').attr('data-thumbimageuri');
@@ -34,10 +62,23 @@ jQuery(document).ready(function($){
 		}));
 		divSelect.append($('<a>', {href : '#', class : 'select-modal',text : 'SELECT','data-target' : id}));
 		$(id).after(divSelect);
+
+
+		$(id).on('change', function(e){
+			$(id).addClass('hidden').delay(0).queue(function(next){
+				$(this).removeClass('show');
+				$('html').removeClass('lock-scroll');
+				next();
+			});
+			$('[data-select-id="'+idName+'"] .select-image-select').attr('src',$(id + '-field option:selected').attr('data-thumbimageuri'));
+			$('[data-select-id="'+idName+'"] .select-title-name').text($(id + '-field option:selected').attr('data-imagetitle'))
+		});
+
 	}
 }).delegate('.select-modal','click',function(e){
 	e.preventDefault();
 	$ = jQuery;
+	$('html').addClass('lock-scroll');
 	$($(this).data('target')).removeClass('hidden').delay(0).queue(function(next){
 		$(this).addClass('show');
 		next();

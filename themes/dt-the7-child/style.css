@@ -8,6 +8,12 @@ License: This WordPress theme is comprised of two parts: (1) The PHP code and in
 Template: dt-the7
 */
 
+html.lock-scroll, html.lock-scroll body {
+    overflow: hidden;
+}
+
+
+
 #page.boxed{
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -238,7 +244,20 @@ Template: dt-the7
     }
 }
 
-
+/* Custom product page */
+.postid-797 #main > .wf-wrap{
+    padding: 0;
+}
+.postid-797 #main .uni_cpo_fields_container{
+    padding: 30px 70px;
+    border-bottom: 2px solid #D9D9D9;
+}
+.postid-797 .woocommerce div.product div.summary h1{
+    padding: 30px 70px;
+}
+.postid-797 .woocommerce div.product div.summary>.price{
+    padding: 30px 70px;
+}
 /* Custom popup select */
 .select-old{
     opacity: 0;
@@ -254,14 +273,41 @@ Template: dt-the7
     z-index: 1000;
 }
 .select-old > .uni-cpo-image-select-list{
-    width: 80%;
-    height: 80%;
+    width: 620px;
+    height: 60%;
     background: #FFF;
     left: 0;
     right: 0;
-    top: 10%;
+    top: 120px;
     margin: auto;
     position: absolute;
+    padding: 20px;
+    overflow: scroll;
+    border: 25px solid #FFF;
+}
+div#content div[data-type="image_select"].select-old.select-image > .uni-cpo-image-select-list>li{
+    width: 33.333333333333%;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 20px;
+    min-height: 200px;
+}
+div#content div[data-type="image_select"].select-old.select-image > .uni-cpo-image-select-list>li>a {
+    width: auto;
+    height: auto;
+    position: relative;
+    display: inline-block;
+    border-radius: 0;
+    padding: 10px;
+    border: 2px solid #D9D9D9;
+}
+div#content div[data-type="image_select"].select-old.select-image > .uni-cpo-image-select-list>li.active>a{
+    border: 2px solid #F69784;
+}
+div#content div[data-type="image_select"].select-old.select-image > .uni-cpo-image-select-list>li>a>img{
+    max-height: 150px;
+    max-width: 150px;
+    height: auto;
 }
 .select-old.hidden{
     display: none !important;
@@ -281,6 +327,7 @@ Template: dt-the7
 }
 .select-image-select{
     max-width: 200px;
+    max-height: 200px;
 }
 .select-item-name{
     position: absolute;
