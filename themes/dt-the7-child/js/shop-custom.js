@@ -1,7 +1,7 @@
 jQuery(document).ready(function($){
 
-	var fieldGold = ['#uni_cpo_option_charm_gold'];
-	var fieldSilver = ['#uni_cpo_option_charm_silver'];
+	var fieldGold = ['#uni_cpo_option_charm_gold','#uni_cpo_option_cap_binder_gold'];
+	var fieldSilver = ['#uni_cpo_option_charm_silver','#uni_cpo_option_cap_binder_silver'];
 	genData();
 
 	$('#uni_cpo_option_color-field').on('change', function(e){
@@ -30,6 +30,9 @@ jQuery(document).ready(function($){
 	function genData(){
 		genSelect('#uni_cpo_option_charm_gold');
 		genSelect('#uni_cpo_option_charm_silver');
+		genSelect('#uni_cpo_option_cord_colour');
+		genSelect('#uni_cpo_option_cap_binder_gold');
+		genSelect('#uni_cpo_option_cap_binder_silver');
 		fieldGold.forEach(function(arr){
 			var idName = (arr[0] == '#') ? arr.split('#')[1] : arr;
 			$('.select-new[data-select-id="'+idName+'"]').show();
@@ -38,6 +41,7 @@ jQuery(document).ready(function($){
 			var idName = (arr[0] == '#') ? arr.split('#')[1] : arr;
 			$('.select-new[data-select-id="'+idName+'"]').hide();
 		});
+		$('form').append('<div id="total-price"> Price <p class="price"><span class="woocommerce-Price-amount amount">$25.00</span></p> AUD</div>')
 	}
 
 	function genSelect(id){
