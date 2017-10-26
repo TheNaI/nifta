@@ -75,7 +75,17 @@ jQuery(document).ready(function($){
 				next();
 			});
 			$('[data-select-id="'+idName+'"] .select-image-select').attr('src',$(id + '-field option:selected').attr('data-thumbimageuri'));
-			$('[data-select-id="'+idName+'"] .select-title-name').text($(id + '-field option:selected').attr('data-imagetitle'))
+			console.log($(id + '-field option:selected').attr('data-thumbimageuri'));
+			console.log($(id + '-field option:selected').attr('data-imagetitle'));
+			$('[data-select-id="'+idName+'"] .select-item-name').text($(id + '-field option:selected').attr('data-imagetitle'))
+		});
+		$(id + ' .uni-cpo-image-select-list').append('<span class="close"></span>');
+		$(id + ' .uni-cpo-image-select-list .close').on('click',function(e){
+			$(id).addClass('hidden').delay(0).queue(function(next){
+				$(this).removeClass('show');
+				$('html').removeClass('lock-scroll');
+				next();
+			});
 		});
 
 	}
