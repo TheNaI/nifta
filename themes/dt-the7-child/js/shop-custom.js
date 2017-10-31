@@ -28,6 +28,9 @@ jQuery(document).ready(function($){
 	});
 
 	function genData(){
+		genTitle('#uni_cpo_option_color');
+		genTitle('#uni_cpo_option_hook_gold');
+		genTitle('#uni_cpo_option_hook_silver');
 		genSelect('#uni_cpo_option_charm_gold');
 		genSelect('#uni_cpo_option_charm_silver');
 		genSelect('#uni_cpo_option_cord_colour');
@@ -75,8 +78,8 @@ jQuery(document).ready(function($){
 				next();
 			});
 			$('[data-select-id="'+idName+'"] .select-image-select').attr('src',$(id + '-field option:selected').attr('data-thumbimageuri'));
-			console.log($(id + '-field option:selected').attr('data-thumbimageuri'));
-			console.log($(id + '-field option:selected').attr('data-imagetitle'));
+			// console.log($(id + '-field option:selected').attr('data-thumbimageuri'));
+			// console.log($(id + '-field option:selected').attr('data-imagetitle'));
 			$('[data-select-id="'+idName+'"] .select-item-name').text($(id + '-field option:selected').attr('data-imagetitle'))
 		});
 		$(id + ' .uni-cpo-image-select-list').append('<span class="close"></span>');
@@ -87,6 +90,16 @@ jQuery(document).ready(function($){
 				next();
 			});
 		});
+
+	}
+	function genTitle(id){
+		var selectField = id+'-field';
+
+		$(id).append('<span class="select-title-2">'+$(selectField + ' option:selected').attr('data-imagetitle')+'</span>');
+		$(id).on('change', function(e){
+			$(id + ' .select-title-2').text($(id + '-field option:selected').attr('data-imagetitle'))
+		});
+
 
 	}
 }).delegate('.select-modal','click',function(e){
