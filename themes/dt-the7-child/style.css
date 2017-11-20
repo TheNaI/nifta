@@ -321,7 +321,7 @@ ul.uni-cpo-image-select-list li{
     max-height: 400px;
 }
 [data-select-id="uni_cpo_option_cord_colour"] .select-item-name{
-    top: 70px;
+    /*top: 70px;*/
 }
 .postid-797 #main #uni_cpo_option_cord_length.uni_cpo_fields_container {
     position: absolute;
@@ -522,4 +522,85 @@ ul#uni_cpo_option_color_list li{
     position: relative;
     margin: 0;
     font: normal 20px / 40px "Source Sans Pro", Helvetica, Arial, Verdana, sans-serif;
+}
+@media (max-width: 768px) {
+    .select-title-2{
+        position: absolute;
+        text-align: center;
+        display: inline-block;
+        top: 80px;
+        left: 70px;
+    }
+    #uni_cpo_option_color_list{
+        margin: 0;
+        margin-top: 70px;
+    }
+    #uni_cpo_option_hook_silver_list{
+        margin:0;
+        margin-top: 70px;
+    }
+    #uni_cpo_option_hook_gold_list{
+        margin:0;
+        margin-top: 70px;
+    }
+    .select-old > .uni-cpo-image-select-list{
+        width: auto;
+        height: 60%;
+        background: #FFF;
+        left: 0;
+        right: 0;
+        top: 120px;
+        margin: auto;
+        position: absolute;
+        padding: 20px;
+        overflow: scroll;
+        padding-top: 60px;
+        border:0;
+    }
+    div#content div[data-type="image_select"].select-old.select-image > .uni-cpo-image-select-list>li {
+        width: 40%;
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    div#content div[data-type="image_select"].select-old.select-image > .uni-cpo-image-select-list>li>a {
+        width: 90%;
+        height: auto;
+        position: relative;
+        display: inline-block;
+        border-radius: 0;
+        padding: 10px;
+        border: 2px solid #D9D9D9;
+    }
+    div#content div[data-type="image_select"].select-old.select-image > .uni-cpo-image-select-list>li>a>img {
+        width: 100%;
+    }
+    .select-old > .uni-cpo-image-select-list .close{
+        top: 0;
+        right: 10px;
+    }
+    .select-image-select{
+        margin-top: 60px;
+    }
+    .select-modal{
+        left: 50px;
+        right: 50px;
+        margin: 0;
+        top: inherit;
+        bottom: 40px;
+    }
+    .select-new{
+        padding-bottom: 90px;
+    }
+    [data-select-id="uni_cpo_option_cord_colour"] .select-image-select{
+        max-height: 250px;
+    }
+    [data-select-id="uni_cpo_option_cord_colour"]{
+        border: 0;
+    }
+    .postid-797 #main #uni_cpo_option_cord_length.uni_cpo_fields_container{
+        margin-top: 0;
+        border-bottom: 2px solid #D9D9D9;
+        position: relative;
+    }
 }
