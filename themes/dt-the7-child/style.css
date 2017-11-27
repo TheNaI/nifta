@@ -11,14 +11,28 @@ Template: dt-the7
 html.lock-scroll, html.lock-scroll body {
     overflow: hidden;
 }
-
-
+body, body.page{
+    background-color: #7f7f7e;
+}
+#bottom-bar.solid-bg {
+    background: #7f7f7e ;
+}
 
 #page.boxed{
     -webkit-box-shadow: none;
     box-shadow: none;
 }
-
+.footer-overlap #page .page-inner{
+    margin-bottom: 120px !important;
+}
+#bottom-bar .wf-td p {
+    margin-bottom: 0;
+    padding: 20px;
+    text-align: center;
+}
+#footer.footer-outline-decoration{
+    border-top: 0 !important;
+}
 
 #footer.footer-outline-decoration {
     border-top: 2px solid #E2E2E2;
