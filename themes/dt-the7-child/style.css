@@ -21,9 +21,10 @@ body, body.page{
 #page.boxed{
     -webkit-box-shadow: none;
     box-shadow: none;
+    /*background-color: #7f7f7e;*/
 }
 .footer-overlap #page .page-inner{
-    margin-bottom: 120px !important;
+    margin-bottom:0 !important;
 }
 #bottom-bar .wf-td p {
     margin-bottom: 0;
@@ -32,10 +33,18 @@ body, body.page{
 }
 #footer.footer-outline-decoration{
     border-top: 0 !important;
+    border-top: 2px solid #E2E2E2;
+    position: relative;
+}
+.home #page{
+    background: none;
 }
 
-#footer.footer-outline-decoration {
-    border-top: 2px solid #E2E2E2;
+.home #main{
+    background: #FFF;
+}
+.home .page-inner{
+    background: none;
 }
 
 #page input[type="text"], #page input[type="search"], #page input[type="tel"], #page input[type="url"], #page input[type="email"], #page input[type="number"], #page input[type="date"], #page input[type="range"], #page input[type="password"], #page select, #page textarea, #page .wpcf7-number {
@@ -195,11 +204,15 @@ ul.uni-cpo-image-select-list li{
 .custom-social-contact {
     display: inline-block;
 }
+.custom-social-contact .aio-icon.circle {
+    display: block;
+}
 
 .custom-social-contact .aio-tooltip {
     border: 2px solid #e2e2e2;
     border-radius: 100%;
     margin-right: 10px;
+    text-decoration: none;
 }
 .custom-social-contact .aio-tooltip:hover {
     border: 2px solid #e2e2e2;
@@ -536,6 +549,20 @@ ul#uni_cpo_option_color_list li{
     position: relative;
     margin: 0;
     font: normal 20px / 40px "Source Sans Pro", Helvetica, Arial, Verdana, sans-serif;
+}
+.footer-social{
+    width: 100%;
+    text-align: center;
+    margin-top: -30px;
+    padding-bottom: 20px;
+}
+
+.footer-social a{
+    font-size: 20px;
+    margin: 0 6px;
+}
+.footer-social a:hover{
+    text-decoration : none !important;
 }
 @media (max-width: 768px) {
     .select-title-2{

@@ -44,7 +44,7 @@ jQuery(document).ready(function($){
 			var idName = (arr[0] == '#') ? arr.split('#')[1] : arr;
 			$('.select-new[data-select-id="'+idName+'"]').hide();
 		});
-		$('form').append('<div id="total-price"> Price <p class="price"><span class="woocommerce-Price-amount amount">$25.00</span></p> AUD</div>')
+		$('form').append('<div id="total-price"> Price <p class="price"><span class="woocommerce-Price-amount amount">$13.00</span></p> AUD</div>')
 	}
 
 	function genSelect(id){
