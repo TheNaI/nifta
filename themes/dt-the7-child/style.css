@@ -15,7 +15,7 @@ body, body.page{
     background-color: #7f7f7e;
 }
 #bottom-bar.solid-bg {
-    background: #7f7f7e ;
+    background: none ;
 }
 
 #page.boxed{
@@ -35,6 +35,7 @@ body, body.page{
     border-top: 0 !important;
     border-top: 2px solid #E2E2E2;
     position: relative;
+    background: none;
 }
 .home #page{
     background: none;
@@ -563,6 +564,9 @@ ul#uni_cpo_option_color_list li{
 }
 .footer-social a:hover{
     text-decoration : none !important;
+}
+#product-797 .woocommerce-product-gallery{
+    display: none !important;
 }
 @media (max-width: 768px) {
     .select-title-2{
