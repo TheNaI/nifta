@@ -571,6 +571,9 @@ ul#uni_cpo_option_color_list li{
 .mobile-main-nav>li.has-children>a.item-ready:after{
     display: none;
 }
+.rev_slider .tp-mask-wrap :last-child {
+    text-align: center !important;
+}
 @media (max-width: 768px) {
     .select-title-2{
         position: absolute;
