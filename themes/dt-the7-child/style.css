@@ -568,6 +568,9 @@ ul#uni_cpo_option_color_list li{
 #product-797 .woocommerce-product-gallery{
     display: none !important;
 }
+.mobile-main-nav>li.has-children>a.item-ready:after{
+    display: none;
+}
 @media (max-width: 768px) {
     .select-title-2{
         position: absolute;
