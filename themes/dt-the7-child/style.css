@@ -571,10 +571,16 @@ ul#uni_cpo_option_color_list li{
 .mobile-main-nav>li.has-children>a.item-ready:after{
     display: none;
 }
+.mobile-main-nav>li.has-children>a[data-level="1"]:after{
+    display: none;
+}
 .rev_slider .tp-mask-wrap :last-child {
     text-align: center !important;
 }
 @media (max-width: 768px) {
+    .second-switch-logo-left.second-switch-menu-right .mobile-header-bar .dt-mobile-menu-icon{
+        margin-right: 10px;
+    }
     .select-title-2{
         position: absolute;
         text-align: center;
