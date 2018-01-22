@@ -154,9 +154,10 @@ ul.uni-cpo-image-select-list li{
 
 
 #custom-comtact-form .contact-form .dt-btn-submit, #custom-comtact-form .contact-form [type="submit"] {
-    border: #737B8A solid 2px;
-    color: #737B8A;
+    border: #e2e2e2 solid 2px;
+    color: #777777;
     background-color: #F5F5F5;
+    font-family: "Source Sans Pro", Helvetica, Arial, Verdana, sans-serif;
 }
 
 #custom-comtact-form .contact-form .dt-btn-submit:hover, #custom-comtact-form .contact-form input[type="submit"]:not([name="update_cart"]):hover {
@@ -576,6 +577,9 @@ ul#uni_cpo_option_color_list li{
 }
 .rev_slider .tp-mask-wrap :last-child {
     text-align: center !important;
+}
+.form-message label.assistive-text{
+    color: #777777;
 }
 @media (max-width: 768px) {
     .second-switch-logo-left.second-switch-menu-right .mobile-header-bar .dt-mobile-menu-icon{
