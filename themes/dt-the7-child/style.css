@@ -430,11 +430,11 @@ div#content div[data-type="image_select"].select-old.select-image > .uni-cpo-ima
 }
 .select-title{
     position: absolute;
-    font: normal 22px / 32px "Source Sans Pro", Helvetica, Arial, Verdana, sans-serif;
+    font: normal  30px / 50px "Source Sans Pro", Helvetica, Arial, Verdana, sans-serif;
     left: 70px;
     top: 20px;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 30px;
     text-transform: uppercase;
 }
 .select-image-select{
