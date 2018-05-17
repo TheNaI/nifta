@@ -581,11 +581,18 @@ ul#uni_cpo_option_color_list li{
     margin: 0;
     font: normal 20px / 40px "Source Sans Pro", Helvetica, Arial, Verdana, sans-serif;
 }
+.bottom-text-block{
+    width: 100%;
+}
+#bottom-bar p{
+    text-align: center;
+}
 .footer-social{
     width: 100%;
     text-align: center;
     margin-top: -30px;
     padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 .footer-social a{
