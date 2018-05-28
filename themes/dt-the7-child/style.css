@@ -58,18 +58,7 @@ body, body.page{
 #product-797 .woocommerce-product-details__short-description{
     display: none;
 }
-#product-1404 .woocommerce-product-gallery--without-images {
-    display: none;
-}
-#product-1404 .woocommerce-product-details__short-description{
-    display: none;
-}
-
 #product-797 .summary.entry-summary {
-    width: 100%;
-}
-
-#product-1404 .summary.entry-summary {
     width: 100%;
 }
 ul.uni-cpo-image-select-list li{
@@ -301,30 +290,14 @@ ul.uni-cpo-image-select-list li{
 .postid-797 #main > .wf-wrap{
     padding: 0;
 }
-.postid-1404 #main > .wf-wrap{
-    padding: 0;
-}
 .postid-797 #main .uni_cpo_fields_container{
-    padding: 30px 70px;
-    border-bottom: 2px solid #D9D9D9;
-}
-.postid-1404 #main .uni_cpo_fields_container{
     padding: 30px 70px;
     border-bottom: 2px solid #D9D9D9;
 }
 .postid-797.woocommerce div.product div.summary h1{
     padding: 0 70px;
 }
-.postid-1404.woocommerce div.product div.summary h1{
-    padding: 0 70px;
-}
-.postid-1404.woocommerce div.product div.summary>.price{
-    padding: 0 70px;
-}
 .postid-797.woocommerce div.product div.summary>.price:after{
-    left: 70px;
-}
-.postid-1404.woocommerce div.product div.summary>.price:after{
     left: 70px;
 }
 /* Custom popup select */
@@ -370,18 +343,24 @@ ul.uni-cpo-image-select-list li{
     padding-bottom: 0px;
 }
 [data-select-id="uni_cpo_option_cord_colour"] .select-image-select{
+    padding-bottom: 0;
+    margin-top: 30px;
+}
+#product-797 [data-select-id="uni_cpo_option_cord_colour"] .select-image-select{
     max-width: inherit;
     max-height: 400px;
+    margin-top: 0;
 }
 [data-select-id="uni_cpo_option_cord_colour"] .select-item-name{
     /*top: 70px;*/
 }
-.postid-797 #main #uni_cpo_option_cord_length.uni_cpo_fields_container {
-    position: absolute;
-    margin-top: -350px;
-    border-bottom: 0;
+#uni_cpo_option_cord_length{
+    border-bottom: 2px solid #D9D9D9;
 }
-.postid-1404 #main #uni_cpo_option_cord_length.uni_cpo_fields_container {
+.postid-797 #main #uni_cpo_option_cord_length{
+    border: 0;
+}
+.postid-797 #main #uni_cpo_option_cord_length.uni_cpo_fields_container {
     position: absolute;
     margin-top: -350px;
     border-bottom: 0;
@@ -452,6 +431,13 @@ div#content div[data-type="image_select"].select-old.select-image > .uni-cpo-ima
 }
 .select-new{
     text-align: center;
+    padding-top: 20px;
+    position: relative;
+    padding-bottom: 0;
+    border-bottom: 2px solid #D9D9D9;
+}
+#product-797 .select-new{
+    text-align: center;
     padding-top: 70px;
     position: relative;
     padding-bottom: 70px;
@@ -459,18 +445,42 @@ div#content div[data-type="image_select"].select-old.select-image > .uni-cpo-ima
 }
 .select-title{
     position: absolute;
+    font: normal 30px / 50px "Source Sans Pro", Helvetica, Arial, Verdana, sans-serif;
+    left: 10px;
+    top: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+#product-797 .select-title{
+    position: absolute;
     font: normal  30px / 50px "Source Sans Pro", Helvetica, Arial, Verdana, sans-serif;
     left: 70px;
     top: 20px;
     font-weight: 600;
-    font-size: 30px;
     text-transform: uppercase;
 }
 .select-image-select{
     max-width: 200px;
     max-height: 200px;
+    left: -10px;
+    position: relative;
+    z-index: -1;
+}
+#product-797 .select-image-select{
+    max-width: 200px;
+    max-height: 200px;
+    left: inherit;
 }
 .select-item-name{
+    position: absolute;
+    top: 90px;
+    font: normal 22px / 50px "Source Sans Pro", Helvetica, Arial, Verdana, sans-serif;
+    left: 10px;
+    font-weight: 600;
+    font-size: 1.00rem;
+    text-transform: uppercase;
+}
+#product-797 .select-item-name{
     position: absolute;
     top: 130px;
     font: normal 22px / 50px "Source Sans Pro", Helvetica, Arial, Verdana, sans-serif;
@@ -481,13 +491,26 @@ div#content div[data-type="image_select"].select-old.select-image > .uni-cpo-ima
 }
 .select-modal{
     position: absolute;
+    right: 10px;
+    top: 100px;
+    text-decoration: none;
+    padding: 0 35px;
+    font: normal 16px / 40px "Georgia", Helvetica, Arial, Verdana, sans-serif;
+    background-color: #f69784;
+    border-width: 2px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    background: rgba(255, 255, 255, 0.01);
+    color: rgb(0, 0, 0);
+}
+#product-797 .select-modal {
+    position: absolute;
     right: 70px;
     top: 45%;
     text-decoration: none;
     padding: 0 35px;
     font: normal 16px / 40px "Georgia", Helvetica, Arial, Verdana, sans-serif;
     background-color: #f69784;
-    /*border: 2px solid #f69784;*/
     border-width: 2px;
     border-color: rgb(0, 0, 0);
     border-style: solid;
@@ -529,6 +552,14 @@ ul#uni_cpo_option_color_list li{
     position: absolute;
     width: 50%;
     bottom: 30px;
+    left: 10px;
+    font: normal 22px / 32px "Source Sans Pro", Helvetica, Arial, Verdana, sans-serif;
+    font-weight: 500;
+}
+#product-797 #total-price{
+    position: absolute;
+    width: 50%;
+    bottom: 30px;
     left: 70px;
     font: normal 22px / 32px "Source Sans Pro", Helvetica, Arial, Verdana, sans-serif;
     font-weight: 500;
@@ -548,12 +579,23 @@ ul#uni_cpo_option_color_list li{
 }
 .product form.cart div.quantity.buttons_added{
     position: absolute;
+    left: 10px;
+    bottom: -20px;
+}
+#product-797 .product form.cart div.quantity.buttons_added{
+    position: absolute;
     left: 70px;
     bottom: -20px;
 }
 .product form.cart .button[type="submit"]{
     position: absolute;
     left: 170px;
+    bottom: -20px;
+    margin: auto;
+}
+#product-797 .product form.cart .button[type="submit"]{
+    position: absolute;
+    left: 110px;
     bottom: -20px;
     margin: auto;
 }
@@ -602,10 +644,10 @@ ul#uni_cpo_option_color_list li{
 .footer-social a:hover{
     text-decoration : none !important;
 }
-#product-797 .woocommerce-product-gallery{
-    display: none !important;
+.woocommerce div.product div.images.woocommerce-product-gallery{
+    margin-right: 20px;
 }
-#product-1404 .woocommerce-product-gallery{
+#product-797 .woocommerce-product-gallery{
     display: none !important;
 }
 .mobile-main-nav>li.has-children>a.item-ready:after{
@@ -619,6 +661,18 @@ ul#uni_cpo_option_color_list li{
 }
 .form-message label.assistive-text{
     color: #777777;
+}
+.product_meta{
+    display: none;
+}
+.related.products{
+    display: none;
+}
+.uni-cpo-option-label{
+    font: normal 22px / 50px "Source Sans Pro", Helvetica, Arial, Verdana, sans-serif;
+    font-weight: 600;
+    font-size: 1.00rem;
+    text-transform: uppercase;
 }
 @media (max-width: 768px) {
     .second-switch-logo-left.second-switch-menu-right .mobile-header-bar .dt-mobile-menu-icon{
@@ -680,7 +734,7 @@ ul#uni_cpo_option_color_list li{
         right: 10px;
     }
     .select-image-select{
-        margin-top: 60px;
+        margin-top: 90px;
     }
     .select-modal{
         left: 50px;
@@ -689,21 +743,27 @@ ul#uni_cpo_option_color_list li{
         top: inherit;
         bottom: 40px;
     }
+    #product-797 .select-modal{
+        top: inherit;
+
+    }
+    #product-797 [data-select-id="uni_cpo_option_cord_colour"] .select-image-select {
+        max-width: 200px;
+        max-height: 400px;
+        margin-top: 110px;
+    }
     .select-new{
         padding-bottom: 90px;
     }
     [data-select-id="uni_cpo_option_cord_colour"] .select-image-select{
         max-height: 250px;
+
+        margin-top: 110px;
     }
     [data-select-id="uni_cpo_option_cord_colour"]{
         border: 0;
     }
     .postid-797 #main #uni_cpo_option_cord_length.uni_cpo_fields_container{
-        margin-top: 0;
-        border-bottom: 2px solid #D9D9D9;
-        position: relative;
-    }
-    .postid-1404 #main #uni_cpo_option_cord_length.uni_cpo_fields_container{
         margin-top: 0;
         border-bottom: 2px solid #D9D9D9;
         position: relative;
